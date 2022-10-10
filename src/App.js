@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react";
+import DataProcessing from "./screens/DataProcessing/DataProcessing";
+import Greeting from "./screens/Greeting/Greeting";
+
+const GREETING_PAGE = 'Greeting Page';
+const DATA_PAGE = 'Data Page';
 
 function App() {
+  const [page, setPage] = useState(GREETING_PAGE);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {page === GREETING_PAGE
+        ? <Greeting moveToDataPage={() => setPage(DATA_PAGE)} />
+        : <DataProcessing moveToDataPage={() => setPage(GREETING_PAGE)} />
+      }
     </div>
   );
 }
