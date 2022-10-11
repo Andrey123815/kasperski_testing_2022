@@ -1,0 +1,13 @@
+.employee-card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  gap: 15px;
+
+  width: 100%;
+  height: 750px;
+
+  margin-left: 50px;
+  margin-bottom: 50px;
+}

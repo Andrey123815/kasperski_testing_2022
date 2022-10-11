@@ -1,0 +1,25 @@
+.employee-groups-list {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid gray;
+  padding: 10px 5px;
+  max-height: 600px;
+  overflow: auto;
+  gap: 30px;
+}
+
+.new-group {
+  width: 160px;
+  height: 60px;
+  color: #1976d2;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid gray;
+}
+
+.new-group span {
+  margin-top: auto;
+  margin-bottom: auto;
+}

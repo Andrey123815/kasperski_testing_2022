@@ -1,0 +1,27 @@
+.employees-group {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  padding: 10px 5px;
+}
+
+.employees-group__header {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.employees-group__employee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-height: 400px;
+  overflow: scroll
+;
+}
+
+.employees-group__add-employee {
+  color: #1976d2;
+  cursor: pointer;
+}

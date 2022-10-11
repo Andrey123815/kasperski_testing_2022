@@ -1,0 +1,21 @@
+.employee-label {
+  width: 180px;
+  min-height: 60px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  font-size: 12px;
+}
+
+.employee-label__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  text-align: left;
+}
+
+.employee-label__info span:first-child {
+  font-weight: bold;
+  font-size: 14px;
+}

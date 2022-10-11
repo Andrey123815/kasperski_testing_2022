@@ -1,0 +1,32 @@
+.employee-card {
+  width: 200px;
+  height: 300px;
+  background: #F5F5F5;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 10px 10px 20px 10px;
+  font-size: 12px;
+}
+
+.employee-card__header-line span:first-child {
+  padding: 0;
+}
+
+.employee-card__header-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.employee-card__user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 220px;
+}
+
+.user-info__full-name {
+  font-weight: bold;
+  font-size: 14px;
+}

@@ -1,0 +1,30 @@
+.view-type-switcher {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.sort-type {
+  color: #42b983;
+  position: relative;
+  place-content: center;
+  place-items: center;
+  width: fit-content;
+  border-radius: 5px;
+  letter-spacing: 0.05em;
+  border: 1px solid #42b983;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 10px;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  font-weight: 700;
+  outline: none;
+  background: #fff;
+  transition: all 0.22s;
+  font-size: 12px;
+  cursor: pointer;
+}
+.active-state {
+  color: white;
+  background: #42b983;
+}
