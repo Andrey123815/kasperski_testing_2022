@@ -1,4 +1,5 @@
 import React from 'react';
+import './Button.css';
 
 function Button(props) {
   return (
@@ -7,3 +8,5 @@ function Button(props) {
     </React.Fragment>
   );
 }
+
+export default Button;
