@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import DataTable from "../../components/DataTable/DataTable";
 import {Button} from "@mui/material";
 import ViewTypeSwitcher from "../../components/ViewTypeSwitcher/ViewTypeSwitcher";
@@ -10,46 +10,23 @@ import {
 import EmployeeCardsList from "../../components/EmployeeCardsList/EmployeeCardsList";
 import EmployeeGroupsList from "../../components/EmployeeGroupsList/EmployeeGroupsList";
 import SearchBar from "../../ui-kit/SearchBar/SearchBar";
-
-const employees = [
-  createData('Andrey Fred', 'companyDomain/AndrDiak', 'email@gmail.com', 'Unmanaged', '+79453453434'),
-  createData('Andrey Fret', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-  createData('Andrey Diakonov', 'companyDomain/AndrDiak', 'email@gmail.com', 'CDN/CEO', '+79453453434'),
-];
-
-function createData(fullName, account, email, group, phone) {
-  return {
-    fullName,
-    account,
-    email,
-    group,
-    phone,
-  };
-}
+import {END_POINTS, request} from "../../network/network";
 
 function DataProcessing(props) {
   const [currViewType, setCurrViewType] = useState(TABLE_TYPE);
   const [search, setSearch] = useState('');
+  const [employees, setEmployees] = useState([]);
 
-  let filteredEmployees = employees.filter(employee => employee.fullName.includes(search));
-  if (filteredEmployees.length === 0) {
-    filteredEmployees = employees;
+  useEffect(() => {
+      request(END_POINTS.getEmployees).then(res => setEmployees(res));
+  }, []);
+
+  const searchRequest = () => {
+    return employees && search.length ? employees.filter(employee => employee && employee?.fullName.includes(search)) : employees;
   }
+
+  const filteredEmployees = useMemo(() => searchRequest(), [employees, search]);
+
   return (
     <>
       <div className="functional-header">

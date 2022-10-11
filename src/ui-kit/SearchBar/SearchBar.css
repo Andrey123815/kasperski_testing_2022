@@ -1,5 +1,6 @@
 .search-bar {
   display: inline-flex;
+  margin-bottom: 10px;
 }
 
 .search-input {

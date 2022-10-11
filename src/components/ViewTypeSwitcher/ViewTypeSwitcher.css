@@ -1,6 +1,8 @@
 .view-type-switcher {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  /*position: relative;*/
+  /*top: 40px;*/
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .sort-type {

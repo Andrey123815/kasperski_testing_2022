@@ -7,6 +7,8 @@ const groupNames = [
   'Frontend',
   'Backend',
   'Designer',
+  'New',
+  'Best'
 ];
 
 function EmployeeGroupsList(props) {

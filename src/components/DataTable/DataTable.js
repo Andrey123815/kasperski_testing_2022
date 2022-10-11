@@ -104,7 +104,7 @@ export default function DataTable(props) {
                       aria-checked={isItemSelected}
                       tabIndex={-1}
                       sx={{background, cursor: "pointer"}}
-                      // key={row.email}
+                      key={row.id}
                       selected={isItemSelected}
                     >
                       <TableCell padding="checkbox">
