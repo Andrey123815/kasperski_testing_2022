@@ -8,7 +8,7 @@ function EmployeeGroup(props) {
       <header className="employees-group__header">{props.groupName}</header>
       <div className="employees-group__employee-list">
         {props.employees.map(employee =>
-          <EmployeeLabel employee={employee} />
+          <EmployeeLabel key={employee.id} employee={employee} />
         )}
       </div>
       <span className="employees-group__add-employee">Добавить пользователя...</span>

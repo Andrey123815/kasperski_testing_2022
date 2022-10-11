@@ -12,4 +12,4 @@ function EmployeeCardsList(props) {
   );
 }
 
-export default EmployeeCardsList = React.memo(EmployeeCardsList);
+export default EmployeeCardsList;

@@ -5,9 +5,10 @@ import {Button} from "@mui/material";
 function Greeting(props) {
   return (
     <>
+      <p style={{marginTop: "10%"}}></p>
       <img src={logo} className="App-logo" alt="logo" />
       <p>
-        Добро пожаловать в тестовый проект. Располагайтесь поудобнее и приступайте к проверке)
+        Добро пожаловать в тестовый проект. Располагайтесь поудобнее и можно приступать к проверке)
       </p>
       <Button onClick={props.moveToDataPage}>Перейти на страницу админа</Button>
     </>

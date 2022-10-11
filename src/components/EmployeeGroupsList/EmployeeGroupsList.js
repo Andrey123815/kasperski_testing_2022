@@ -24,7 +24,7 @@ function EmployeeGroupsList(props) {
   return (
     <div className="employee-groups-list">
       {Object.entries(orderlyEmployees).map(([group, employees], index) =>
-        <EmployeeGroup groupName={groupNames[index]} group={group} employees={employees} />
+        <EmployeeGroup key={groupNames[index]} groupName={groupNames[index]} group={group} employees={employees} />
       )}
       <div className="new-group">Добавить новую группу</div>
     </div>
