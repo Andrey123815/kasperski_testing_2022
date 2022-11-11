@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kasperski_testing_2022/static/css/main.df9f80b7.css",
+    "main.js": "/kasperski_testing_2022/static/js/main.cd33b53d.js",
+    "static/js/787.ae9ad325.chunk.js": "/kasperski_testing_2022/static/js/787.ae9ad325.chunk.js",
+    "static/media/logo.svg": "/kasperski_testing_2022/static/media/logo.b5b0a1d9b9c9317649c9d03c0ccbfcb5.svg",
+    "index.html": "/kasperski_testing_2022/index.html",
+    "main.df9f80b7.css.map": "/kasperski_testing_2022/static/css/main.df9f80b7.css.map",
+    "main.cd33b53d.js.map": "/kasperski_testing_2022/static/js/main.cd33b53d.js.map",
+    "787.ae9ad325.chunk.js.map": "/kasperski_testing_2022/static/js/787.ae9ad325.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df9f80b7.css",
+    "static/js/main.cd33b53d.js"
+  ]
+}
