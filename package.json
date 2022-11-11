@@ -1,6 +1,7 @@
 {
   "name": "kasperski_testing_2022",
   "version": "0.1.0",
+  "homepage": "https://Andrey123815.github.io/kasperski_testing_2022",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -18,6 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build npm run server",
     "dev": "react-scripts start",
     "start": "concurrently \"npm run server\" \"npm run dev\"",
     "build": "react-scripts build",
@@ -42,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
